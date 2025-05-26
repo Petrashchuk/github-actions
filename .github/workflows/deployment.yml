@@ -37,10 +37,9 @@ jobs:
         run: npm run lint
   build:
     needs: [ lint, test ]
-    continue-or-error: true
     strategy:
       matrix:
-        node-version: [ 14, 16 ]
+        node-version: [ 16 ]
         os: [ ubuntu-latest, windows ]
     runs-on: ${{ matrix.os }}
     steps:
