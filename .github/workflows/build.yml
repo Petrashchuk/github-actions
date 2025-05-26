@@ -8,7 +8,7 @@ jobs:
       - name: Get Repository
         uses: actions/checkout@v3
       - name: Install NPM
-        run: npm run ci
+        run: npm ci
       - name: Build App
         run: npm run build
       - name: Upload Artifacts
