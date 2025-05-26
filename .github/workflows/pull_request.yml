@@ -3,11 +3,11 @@ name: Print Pull Request Context
 on:
   workflow_dispatch:
   pull_requests:
-    types:[opened,edited,reopened]
+    types: [ opened, edited, reopened ]
 
 jobs:
   print:
-    runs-on:ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Print Context
         run: echo ${{ toJSON( github.event ) }}
